@@ -1,0 +1,5 @@
+# You may want to gitIgnore your DB if your migrations will take you to an external DB. 
+
+venv/*
+.vscode/*
+ 
