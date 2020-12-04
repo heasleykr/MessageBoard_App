@@ -25,7 +25,8 @@ SECRET_KEY = '=y86zvdit^tr%4@6&zw76mf*s2h=gh(o08rhv4%_0*2&+d=fwe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Allows the subdomains of heroku to use our app, along with our local. 
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
