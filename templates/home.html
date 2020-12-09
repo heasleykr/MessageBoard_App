@@ -1,7 +1,38 @@
 <!-- templates/home.html -->
-<h1>Message borad homepage</h1>
-<ul>
-    {% for post in all_posts_list %}
-        <li>{{ post.text }}</li>
-    {% endfor %}
-</ul>
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+
+<head>
+    {% load static %}
+    <link rel=”stylesheet” href="{% static 'css/style.css' %}"> 
+    <title>Message Board App</title>
+</head>
+<body id="test">
+        <div class="container-fluid mt-5">
+            <div class="mb-7 p-2 text-info text-center border-bottom border-info">
+                <h1>Message Board Homepage</h1>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row g-4">
+                    {% for post in all_posts_list %}
+                        <div class="p-2">
+                            <div class="card shadow text-center" style="width: 18rem;">
+                                <div class="card-header">
+                                    Featured
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ post.text }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+            </div>
+        </div>
+    <!-- </div> -->
+</body>
+
+<!-- <h1 class="text-center mt-10 mb-5"><span class="badge bg-info">Message Board Homepage</span></h1> -->
