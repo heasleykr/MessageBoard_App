@@ -1,28 +1,35 @@
 <!-- templates/home.html -->
-{% load static %}
 {% load bootstrap4 %}
 {% bootstrap_css %}
 {% bootstrap_javascript jquery='full' %}
+{% load fontawesome_5 %}
+
 
 
 <head>
-    {% load static %}
-    <link rel=”stylesheet” href="{% static 'css/style.css' %}"> 
+    {% fontawesome_5_static %}
     <title>Message Board App</title>
 </head>
 <body id="test">
-        <div class="container-fluid mt-5">
-            <div class="mb-7 p-2 text-info text-center border-bottom border-info">
-                <h1>Message Board Homepage</h1>
+        <div class="container-fluid mt-3">
+            <div class="row gx-2 border-bottom border-info">
+                <div class="col p-2">
+                    {% load static %} <img src="{% static 'logo.jpg' %}" class="shadow img-thumbnail" width="200" height="200" alt="Message Logo" />
+                </div>
+                <div class="col mt-5 p-2 text-info">
+                    <h1>Message Board Homepage</h1>
+                    <!-- {% fa5_icon 'affiliatetheme' 'fab' %} -->
+                </div>
             </div>
         </div>
-        <div class="container mt-5">
+        <div class="container mb-5 mt-5 border-bottom border-info">
             <div class="row g-4">
                     {% for post in all_posts_list %}
                         <div class="p-2">
                             <div class="card shadow text-center" style="width: 18rem;">
                                 <div class="card-header">
                                     Featured
+                                    <p class="">{% fa5_icon 'comment' 'fas' %}</p>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">{{ post.text }}</h5>
