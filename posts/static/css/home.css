@@ -1,0 +1,46 @@
+/* static/css/home.css */
+
+/* Global */
+i {
+    color: #09b5a9;
+}
+
+/* Body */
+#title {
+    font-family: 'Fredericka the Great', cursive;
+    color: #09b5a9;
+    font-size: 4rem;
+    margin-left: 3rem;
+}
+#logo {
+    width: 230px;
+    height: 225px;
+    padding-left: 2rem;
+    filter: drop-shadow(1px, 4px, 3px, #531616);
+}
+#footer {
+    background-color: black;
+}
+#logoSmall {
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+}
+#socialMedia {
+    font-size: 1.5rem;
+}
+#address,
+#hours {
+    color: #09b5a9;
+    font-family: 'Fredericka the Great', cursive;
+}
+#copyright {
+    color: white;
+    margin-top: 4rem;
+}
+#top {
+    color: #09b5a9;
+    text-decoration: underline;
+}
+#top:visited {
+    color: white;
+}
