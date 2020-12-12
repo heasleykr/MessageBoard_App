@@ -1,9 +1,9 @@
 <!-- templates/home.html -->
 {% load bootstrap4 %}
 {% bootstrap_css %}
-<!-- {% bootstrap_javascript jquery='full' %} -->
+{% bootstrap_javascript jquery='full' %}
 {% load fontawesome_5 %}
-{% load static %}
+
 
 
 
@@ -12,17 +12,21 @@
 
     {% fontawesome_5_static %}
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Fredericka+the+Great&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 </head>
 <body id="test">
-        <div id="header" class="container-fluid mt-3 mb-3">
-            <div class="row border-bottom border-top border-info">
-                <div class="col- p-2">
-                    {% load static %} <img id="logo" class="img-thumbnail border-0" src="{% static 'logo.jpg' %}" alt="Message Logo" />
-                </div>
-                <div class="col-sm-8 mt-5 text-center">
-                    <h1 id="title">PIGEON MESSAGE BOARD</h1>
+        <div id="header" class="container-fluid mt-3 mb-3 bg-dark">
+            <div class="border-bottom border-top border-info">
+                <div class="d-flex justify-content-around">
+                    <div class="p-2 align-self-center text-white-50">
+                        {% fa5_icon 'dice-d20' 'fas' %}
+                    </div>
+                    <div class="mt-5 text-center text-white">
+                        <h1 id="title">PIGEON MESSAGE BOARD</h1>
+                    </div>
+                    <div class="p-2 align-self-center text-white-50">
+                        {% fa5_icon 'dice-d20' 'fas' %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,14 +48,14 @@
             </div>
         </div>
         <!-- Footer -->
-        <div id="footer" class=" pb-5 container-fluid border-top border-info">
+        <div id="footer" class=" pb-5 container-fluid border-top border-info bg-dark text-white">
             <footer>
                     <div class="row pt-5">
                         <div id="address" class="col-sm ml-3">
                                 <h4>Address :</h4>
                                 <p>Av. University 245-k 25896</p> 
                         </div>
-                        <div class="col-sm-8 text-center border-bottom border-info">
+                        <div class="col-sm-8 text-center border-bottom">
                             <h3 id="logoSmall" class="mb-3">Don't Shoot The Messenger Pigeon</h3>
                             <div id="socialMedia">
                                 <i class="fab fa-twitter"></i>
